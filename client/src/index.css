@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 20%);
+  --muted: hsl(210, 20%, 98%);
+  --muted-foreground: hsl(215, 8%, 45%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 20%);
+  --border: hsl(214, 13%, 92%);
+  --input: hsl(214, 13%, 92%);
+  --primary: hsl(352, 100%, 69%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(174, 63%, 62%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(53, 100%, 68%);
+  --accent-foreground: hsl(240, 10%, 20%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(240, 10%, 20%);
+  --radius: 0.5rem;
+  --neutral: hsl(210, 20%, 98%);
+  --dark: hsl(210, 20%, 20%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(352, 100%, 69%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(174, 63%, 62%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(53, 100%, 68%);
+  --accent-foreground: hsl(240, 10%, 20%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  --neutral: hsl(240, 3.7%, 15.9%);
+  --dark: hsl(0, 0%, 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased text-foreground;
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+    background-color: hsl(210, 20%, 98%);
+  }
+
+  .font-korean {
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90 transition-colors;
+  }
+
+  .text-primary-custom {
+    color: hsl(352, 100%, 69%);
+  }
+
+  .text-secondary-custom {
+    color: hsl(174, 63%, 62%);
+  }
+
+  .text-accent-custom {
+    color: hsl(53, 100%, 68%);
+  }
+
+  .bg-primary-custom {
+    background-color: hsl(352, 100%, 69%);
+  }
+
+  .bg-secondary-custom {
+    background-color: hsl(174, 63%, 62%);
+  }
+
+  .bg-accent-custom {
+    background-color: hsl(53, 100%, 68%);
+  }
+
+  .bg-neutral-custom {
+    background-color: hsl(210, 20%, 98%);
+  }
+
+  .bg-dark-custom {
+    background-color: hsl(210, 20%, 20%);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+}
+
+@layer utilities {
+  .drag-over {
+    @apply border-primary bg-primary/5;
+  }
+}
